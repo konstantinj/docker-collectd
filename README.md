@@ -20,6 +20,7 @@ Collectd is configured to send data via network plugin to NETWORK_HOST:NETWORK_P
 ```bash
 sudo docker run \
   --volume=/var/run/docker.sock:/var/run/docker.sock \
+  --env HOSTNAME=localhost \
   --env NETWORK_HOST=e.g. logstash \
   --env NETWORK PORT=e.g. 25826 \
   konstantinj/docker-collectd
