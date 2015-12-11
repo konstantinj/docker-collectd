@@ -1,4 +1,4 @@
-Hostname "{{HOSTNAME}}"
+Hostname "{{ HOSTNAME }}"
 
 FQDNLookup false
 Interval 10
@@ -16,9 +16,8 @@ TypesDB "/etc/collectd/types.db"
 TypesDB "/share/docker-collectd-plugin/dockerplugin.db"
 
 LoadPlugin network
-
 <Plugin network>
-    <Server "NETWORK_HOST" "NETWORK_PORT">
+    <Server "{{ NETWORK_HOST | default("logstash") }}" "{{ NETWORK_PORT | default(25826) }}">
     </Server>
 </Plugin>
 
@@ -32,3 +31,5 @@ LoadPlugin python
     Timeout 3
   </Module>
 </Plugin>
+
+Include "/etc/collectd/collectd.d/*.conf"
