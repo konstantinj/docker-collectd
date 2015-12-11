@@ -2,9 +2,9 @@ Hostname "{{ HOSTNAME }}"
 
 FQDNLookup false
 Interval 10
-Timeout 2
-ReadThreads 5
-WriteThreads 5
+Timeout 3
+ReadThreads 1
+WriteThreads 1
 
 LoadPlugin cpu
 LoadPlugin disk
