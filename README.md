@@ -1,6 +1,6 @@
 # Collectd with Docker
 
-**Collectd** container with [docker-collectd-plugin](https://github.com/lebauce/docker-collectd-plugin).
+**Collectd** container with [docker-collectd-plugin](https://github.com/bobrik/collectd-docker).
 
 This uses the **Docker API** to report stats for each container on the host.
 
@@ -9,9 +9,10 @@ The following container stats are reported:
 - Network bandwidth
 - Memory usage
 - CPU usage
-- Block IO
 
-The name of the container is used for the `plugin_instance` dimension.
+Metric names look like this:
+
+> collectd.<host>.docker_stats.<app>.<task>.<type>.<metric>
 
 Collectd is configured to send data via network plugin to NETWORK_HOST:NETWORK_PORT..
 
@@ -23,5 +24,5 @@ sudo docker run \
   --env HOSTNAME=localhost \
   --env NETWORK_HOST=e.g. logstash \
   --env NETWORK PORT=e.g. 25826 \
-  konstantinj/docker-collectd
+  konjak/docker-collectd
 ```
