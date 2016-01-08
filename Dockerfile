@@ -9,9 +9,9 @@ RUN wget -O /collector https://github.com/bobrik/collectd-docker/releases/downlo
  && wget -O /etc/collectd/types.db https://raw.githubusercontent.com/collectd/collectd/master/src/types.db \
  && pip install envtpl
 
-ADD types.db /etc/collectd/docker.types.db
-ADD collectd.conf.tpl /etc/collectd/collectd.conf.tpl
-ADD collectd.d /etc/collectd/collectd.d
-ADD run.sh /run.sh
+COPY collectd.conf.tpl /etc/collectd/collectd.conf.tpl
+COPY docker.types.db /etc/collectd/docker.types.db
+COPY collectd.d /etc/collectd/collectd.d
+COPY run.sh /run.sh
 
 CMD /run.sh

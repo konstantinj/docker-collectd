@@ -2,7 +2,7 @@
 set -e
 
 if [ ! -f /usr/share/collectd/types.db ]; then
-  mv /etc/collectd/docker.types.db /usr/share/collectd/types.db
+  cat /etc/collectd/*.db>/usr/share/collectd/types.db
 fi
 
 if [ -f /etc/collectd/collectd.conf.tpl ]; then
