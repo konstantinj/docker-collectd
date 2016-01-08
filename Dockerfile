@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER Konstantin Jakobi <konstantin.jakobi@gmail.com>
 
-RUN apk add -U bash git wget collectd collectd-dev collectd-curl collectd-network collectd-rrdtool py-pip \
+RUN apk add -U bash git wget collectd collectd-dev collectd-curl collectd-network collectd-rrdtool collectd-nginx collectd-apache collectd-mysql py-pip \
  && rm -rf /var/cache/apk/*
 
 RUN wget -O /collector https://github.com/bobrik/collectd-docker/releases/download/0.4.1/collectd-docker.amd64 \
