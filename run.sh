@@ -16,4 +16,4 @@ if (( ${#tpls} )); then
   done
 fi
 
-exec collectd -f
+exec collectd -f > /dev/null
