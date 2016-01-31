@@ -14,7 +14,9 @@ The following container stats are reported:
 
 Metric names look like this:
 
-> collectd.<host>.docker_stats.<app>.<task>.<type>.<metric>
+```
+collectd.<host>.docker_stats.<app>.<task>.<type>.<metric>
+```
 
 Collectd is configured to send data via network plugin to NETWORK_HOST:NETWORK_PORT.
 
