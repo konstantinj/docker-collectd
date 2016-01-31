@@ -1,4 +1,4 @@
-# Collectd with Docker
+# Collectd Docker iamge for Docker monitoring
 
 **Collectd** container with [docker-collectd-plugin](https://github.com/bobrik/collectd-docker).
 
@@ -24,5 +24,5 @@ sudo docker run \
   --env HOSTNAME=localhost \
   --env NETWORK_HOST=e.g. logstash \
   --env NETWORK PORT=e.g. 25826 \
-  konjak/docker-collectd
+  konjak/collectd
 ```
